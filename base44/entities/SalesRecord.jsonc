@@ -1,0 +1,40 @@
+{
+  "name": "SalesRecord",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the sale (YYYY-MM-DD)"
+    },
+    "product": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "quantity_sold": {
+      "type": "number",
+      "description": "Number of units sold"
+    },
+    "revenue": {
+      "type": "number",
+      "description": "Revenue from this product on this date"
+    },
+    "day_of_week": {
+      "type": "string",
+      "description": "Day of the week"
+    },
+    "weather": {
+      "type": "string",
+      "description": "Weather condition"
+    },
+    "temperature": {
+      "type": "number",
+      "description": "Temperature in Fahrenheit"
+    }
+  },
+  "required": [
+    "date",
+    "product",
+    "quantity_sold"
+  ]
+}

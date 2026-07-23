@@ -1,0 +1,66 @@
+{
+  "name": "ProductionRecommendation",
+  "type": "object",
+  "properties": {
+    "target_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the prediction is for"
+    },
+    "product": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "recommended_quantity": {
+      "type": "number",
+      "description": "AI recommended production quantity"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "AI confidence score 0-100"
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "AI explanation for the recommendation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "modified"
+      ],
+      "default": "pending",
+      "description": "Manager review status"
+    },
+    "adjusted_quantity": {
+      "type": "number",
+      "description": "Manager-adjusted quantity if modified"
+    },
+    "manager_name": {
+      "type": "string",
+      "description": "Name of the manager who reviewed"
+    },
+    "manager_comments": {
+      "type": "string",
+      "description": "Manager feedback"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the manager reviewed"
+    },
+    "overall_analysis": {
+      "type": "string",
+      "description": "AI overall analysis of the data trends"
+    }
+  },
+  "required": [
+    "target_date",
+    "product",
+    "recommended_quantity",
+    "confidence",
+    "reasoning"
+  ]
+}
